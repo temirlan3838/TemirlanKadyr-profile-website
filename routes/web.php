@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/exp', function () {
     return view('experience');
 });
+
+Route::get('/foot', function () {
+    return view('footer');
+});
