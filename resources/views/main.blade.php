@@ -18,9 +18,9 @@
             <label class="menu-icon" for="menu-btn"> <span class="nav-icon"></span> </label>
             <ul class="menu">
                 <li><a class="nav_link" href="">Home</a></li>
-                <li><a class="nav_link" href="">Skills</a></li>
-                <li><a class="nav_link" href="">Work</a></li>
-                <li><a class="nav_link" href="">Contact</a></li>
+                <li><a class="nav_link" href="{{('exp')}}">Skills</a></li>
+                <li><a class="nav_link" href="{{('foot')}}">Work</a></li>
+                <li><a class="nav_link" href="{{('foot')}}">Contact</a></li>
             </ul>
         </nav>
     </div>

@@ -19,8 +19,8 @@ Route::get('/', function () {
 
 Route::get('/exp', function () {
     return view('experience');
-});
+})->name('exp');
 
 Route::get('/foot', function () {
     return view('footer');
-});
+})->name('foot');
