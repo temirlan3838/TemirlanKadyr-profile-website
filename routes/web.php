@@ -34,3 +34,8 @@ Route::get('/post/create', function () {
         'body' => 'bodyExample'
     ]);
 });
+
+Route::get('/post', function () {
+    $post = Post::find(1);
+    return $post->id . "  -> " . $post->title . "  -> " . $post->body . " ->  " . $post->timestamps;
+});
