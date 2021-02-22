@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,12 @@ Route::get('/exp', function () {
 Route::get('/foot', function () {
     return view('footer');
 })->name('foot');
+
+
+Route::get('/post/create', function () {
+    DB::table('posts')->insert([
+        'id' => 1,
+        'title' => 'postTitleExample',
+        'body' => 'bodyExample'
+    ]);
+});
