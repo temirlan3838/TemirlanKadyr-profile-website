@@ -28,13 +28,13 @@ Route::get('/foot', function () {
 })->name('foot');
 
 
-Route::get('/post/create', function () {
-    DB::table('posts')->insert([
-        'id' => 3,
-        'title' => 'title3',
-        'body' => 'body3'
-    ]);
-});
+// Route::get('/post/create', function () {
+//     DB::table('posts')->insert([
+//         'id' => 3,
+//         'title' => 'title3',
+//         'body' => 'body3'
+//     ]);
+// });
 
 // Route::get('/post', function () {
 // $post = Post::find(3);
@@ -42,3 +42,9 @@ Route::get('/post/create', function () {
 // });
 
 Route::get('post', [BlogController::class, 'index']);
+
+Route::get('post/create', function () {
+    return view('blog.create');
+});
+
+Route::post('post/create', [BlogController::class, 'store'])->name('add-post');
