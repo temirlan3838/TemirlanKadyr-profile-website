@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SendEmailController;
+use GuzzleHttp\Psr7\UploadedFile;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,3 +54,6 @@ Route::post('post/create', [BlogController::class, 'store'])->name('add-post');
 
 
 Route::get('post/{id}', [BlogController::class, 'get_post']);
+
+Route::get('/sendmail', [SendEmailController::class, 'index']);
+Route::post('/sendmail/send', [SendEmailController::class, 'send'])->name('add-user');
