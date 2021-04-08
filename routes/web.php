@@ -22,6 +22,11 @@ Route::get('/', function () {
     return view('main');
 });
 
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('main');
+});
+
 Route::get('/exp', function () {
     return view('experience');
 })->name('exp');
@@ -57,3 +62,4 @@ Route::get('post/{id}', [BlogController::class, 'get_post']);
 
 Route::get('/sendmail', [SendEmailController::class, 'index']);
 Route::post('/sendmail/send', [SendEmailController::class, 'send'])->name('add-user');
+Route::get('/sendmail/display', [SendEmailController::class, 'display']);

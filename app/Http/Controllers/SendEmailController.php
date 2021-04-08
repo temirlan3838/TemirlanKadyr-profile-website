@@ -50,4 +50,9 @@ class SendEmailController extends Controller
 
         return back();
     }
+    public function display()
+    {
+        $employees = Employee::all();
+        return view('display')->with('employees', $employees);
+    }
 }
